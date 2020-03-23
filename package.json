@@ -1,0 +1,20 @@
+{
+  "name": "serverless-webscraping",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "browser-search": "node ./src/search/runLocal.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chrome-aws-lambda": "^2.1.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "puppeteer": "^2.1.1"
+  },
+  "dependencies": {}
+}

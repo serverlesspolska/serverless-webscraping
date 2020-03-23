@@ -1,0 +1,19 @@
+service: serverless-webscraping
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: ${self:custom.deployment.myRegion.${self:custom.deployment.myStage}}
+  profile: ${self:custom.deployment.myProfile.${self:custom.deployment.myStage}}
+custom:
+  deployment: ${file(config/deployment.yml):deployment}
+
+functions:
+
+  search:
+    handler: src/search/function.handler
+    description: Search for jobs with serverless query
+    timeout: 20
+    memorySize: 1600
+    layers:
+      - arn:aws:lambda:eu-central-1:764866452798:layer:chrome-aws-lambda:10

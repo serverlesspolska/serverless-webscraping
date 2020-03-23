@@ -1,0 +1,10 @@
+deployment:
+  myRegion:
+    dev: eu-central-1
+    test: eu-central-1
+    prod: eu-central-1
+  myProfile:
+    dev: default
+    test: default
+    prod: default
+  myStage: ${opt:stage, self:provider.stage}
